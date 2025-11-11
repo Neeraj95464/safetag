@@ -27,7 +27,7 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 
-export default function SafetagWebsite() {
+export default function SAFeTAGWebsite() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
@@ -86,7 +86,7 @@ export default function SafetagWebsite() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const message = `New Inquiry from Safetag Website%0A%0AName: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0ACompany: ${formData.company}%0AService: ${formData.service}%0AMessage: ${formData.message}`;
+    const message = `New Inquiry from SAFeTAG Website%0A%0AName: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0ACompany: ${formData.company}%0AService: ${formData.service}%0AMessage: ${formData.message}`;
 
     const mailtoLink = `mailto:info@safetag.co.in?subject=New Website Inquiry&body=${message}`;
     window.location.href = mailtoLink;
@@ -115,25 +115,18 @@ export default function SafetagWebsite() {
   const services = [
     // {
     //   icon: <Ticket className="w-12 h-12" />,
-    //   title: "InfraDesk AI",
-    //   description:
-    //     "AI-powered IT helpdesk and infrastructure asset management platform for streamlined ticket management and comprehensive asset tracking",
-    //   features: [
-    //     "Smart Ticketing System",
-    //     "Asset Management",
-    //     "AI-Powered Automation",
-    //   ],
-    // },
-    // {
-    //   icon: <Ticket className="w-12 h-12" />,
     //   title: (
     //     <a
-    //       href="https://infradeskai.safetag.co.in"
+    //       href="https://infradeskai.SAFeTAG.co.in"
     //       target="_blank"
     //       rel="noopener noreferrer"
-    //       className="hover:text-blue-600 transition-colors"
+    //       className="hover:text-blue-600 transition-colors inline-flex items-center gap-2"
     //     >
-    //       InfraDesk AI
+    //       <span>InfraDesk AI</span>
+    //       <span className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-blue-600">
+    //         <span className="text-xs">click me</span>
+    //         <ArrowUpRight className="w-4 h-4" />
+    //       </span>
     //     </a>
     //   ),
     //   description:
@@ -149,7 +142,7 @@ export default function SafetagWebsite() {
       icon: <Ticket className="w-12 h-12" />,
       title: (
         <a
-          href="https://infradeskai.safetag.co.in"
+          href="https://infradeskai.SAFeTAG.co.in"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-blue-600 transition-colors inline-flex items-center gap-2"
@@ -158,6 +151,9 @@ export default function SafetagWebsite() {
           <span className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-blue-600">
             <span className="text-xs">click me</span>
             <ArrowUpRight className="w-4 h-4" />
+          </span>
+          <span className="ml-2 px-2 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full">
+            Free
           </span>
         </a>
       ),
@@ -233,6 +229,13 @@ export default function SafetagWebsite() {
     },
   ];
 
+  // Mapping partner names to their logo filenames
+  const logoMap = {
+    "Yotta Cloud": "/yottaCloudlogo.jpg",
+    "Facto HRMS": "/factohrlogo.jpg",
+    "Truein Face Recognition": "/trueinlogo.jpg",
+  };
+
   const stats = [
     {
       icon: <Users className="w-8 h-8" />,
@@ -267,14 +270,19 @@ export default function SafetagWebsite() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">S</span>
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-gray-900">
-                  Safetag Enterprises
-                </h1>
-                <p className="text-xs text-gray-600">LLP</p>
+              {/* <div className="w-152 h-10 rounded-lg flex items-center justify-center">
+                <img
+                  src="/SAFeTAGlogoo.jpg"
+                  alt="Logo"
+                  className="w-full h-full object-contain rounded-lg"
+                />
+              </div> */}
+              <div className="w-64 h-30 rounded-lg flex items-center justify-center">
+                <img
+                  src="/safetaglogo.jpg"
+                  alt="Logo"
+                  className="w-full h-full object-contain rounded-lg"
+                />
               </div>
             </div>
 
@@ -407,7 +415,7 @@ export default function SafetagWebsite() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              About Safetag Enterprises
+              About SAFeTAG Enterprises
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               A Hyderabad-based registered firm delivering excellence in digital
@@ -426,7 +434,7 @@ export default function SafetagWebsite() {
                     Registered & Certified
                   </h3>
                   <p className="text-gray-600">
-                    Safetag Enterprises LLP is a registered firm with certified
+                    SAFeTAG Enterprises LLP is a registered firm with certified
                     experts emphasizing quality, ethics, and timely delivery.
                   </p>
                 </div>
@@ -468,7 +476,7 @@ export default function SafetagWebsite() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    Serving Telangana & India
+                    Serving India Proudly
                   </h3>
                   <p className="text-gray-600">
                     Supporting businesses across Telangana and pan-India with
@@ -590,41 +598,19 @@ export default function SafetagWebsite() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Partners
+              In Strategic Tie-Up With
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Authorized Gold Partner status with industry-leading platforms
+              {/* Authorized Gold Partner status with industry-leading platforms */}
+              Building Smarter Solutions in Collaboration with Global Tech
+              Ecosystems
             </p>
           </div>
 
-          {/* Your existing grid of simple partners */}
           {/* <div className="grid md:grid-cols-3 gap-8">
-            {partners.map((partner, idx) => (
-              <div
-                key={idx}
-                className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Award className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  {partner.name}
-                </h3>
-                <p className="text-blue-600 font-semibold">{partner.type}</p>
-              </div>
-            ))}
-          </div> */}
-
-          <div className="grid md:grid-cols-3 gap-8">
             {partners.map((partner, idx) => {
               // Construct dynamic path based on partner id
               let path = `/partners/${partner.id}`;
-
-              // Or you can use explicit if conditions:
-              // let path = '/partners';
-              // if (partner.id === 'truein') path = '/partners/truein';
-              // else if (partner.id === 'factohr') path = '/partners/factohr';
-              // else if (partner.id === 'yotta') path = '/partners/yotta';
 
               return (
                 <Link
@@ -632,8 +618,40 @@ export default function SafetagWebsite() {
                   to={path}
                   className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105 block"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Award className="w-8 h-8 text-white" />
+                  <div className="w-24 h-24 flex items-center justify-center mx-auto mb-6">
+                    <img
+                      src="/factohrlogo.jpg"
+                      alt="Logo"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    {partner.name}
+                  </h3>
+                  <p className="text-blue-600 font-semibold">{partner.type}</p>
+                </Link>
+              );
+            })}
+          </div> */}
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {partners.map((partner, idx) => {
+              let path = `/partners/${partner.id}`;
+              const logoSrc = logoMap[partner.name]; // Get logo from logoMap
+
+              return (
+                <Link
+                  key={idx}
+                  to={path}
+                  className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105 block"
+                >
+                  <div className="w-24 h-24 flex items-center justify-center mx-auto mb-6">
+                    <img
+                      src={logoSrc}
+                      alt={partner.name}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
                     {partner.name}
@@ -690,7 +708,7 @@ export default function SafetagWebsite() {
                       <h4 className="font-semibold text-gray-900 mb-1">
                         Phone
                       </h4>
-                      <p className="text-gray-600">+91 98765 43210</p>
+                      <p className="text-gray-600">+91 7997107107</p>
                     </div>
                   </div>
 
@@ -851,20 +869,17 @@ export default function SafetagWebsite() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div className="md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+                {/* <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-xl">S</span>
-                </div>
+                </div> */}
                 <div>
-                  <h3 className="text-xl font-bold">Safetag Enterprises</h3>
-                  <p className="text-sm text-gray-400">LLP</p>
+                  <h3 className="text-xl font-bold">SAFeTAG Enterprises LLP</h3>
+                  {/* <p className="text-sm text-gray-400">LLP</p> */}
                 </div>
               </div>
               <p className="text-gray-400 mb-4">
                 Empowering businesses with cutting-edge digital solutions across
                 India. Your trusted partner for technology transformation.
-              </p>
-              <p className="text-sm text-gray-500">
-                © 2024 Safetag Enterprises LLP. All rights reserved.
               </p>
             </div>
 
@@ -915,7 +930,7 @@ export default function SafetagWebsite() {
                 </li>
                 <li className="flex items-center space-x-2">
                   <Phone className="w-4 h-4" />
-                  <span>+91 98765 43210</span>
+                  <span>+91 7997107107</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <Mail className="w-4 h-4" />
@@ -926,9 +941,11 @@ export default function SafetagWebsite() {
           </div>
 
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-            <p>
-              Built with excellence by Safetag Enterprises | Authorized Gold
-              Partner for Yotta Cloud, Facto HRMS & Truein
+            {/* Built with excellence by SAFeTAG Enterprises */}
+            {/* | Authorized Gold
+              Partner for Yotta Cloud, Facto HRMS & Truein */}
+            <p className="text-sm text-gray-500">
+              © 2023 SAFeTAG Enterprises LLP. All rights reserved.
             </p>
           </div>
         </div>
