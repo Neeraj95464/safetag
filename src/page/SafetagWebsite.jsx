@@ -239,17 +239,17 @@ export default function SAFeTAGWebsite() {
   const stats = [
     {
       icon: <Users className="w-8 h-8" />,
-      value: "500+",
+      value: "50+",
       label: "Happy Clients",
     },
     {
       icon: <Target className="w-8 h-8" />,
-      value: "1000+",
+      value: "100+",
       label: "Projects Completed",
     },
     {
       icon: <Award className="w-8 h-8" />,
-      value: "15+",
+      value: "5+",
       label: "Years Experience",
     },
     {
