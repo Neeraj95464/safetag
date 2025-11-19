@@ -249,7 +249,7 @@ export default function SAFeTAGWebsite() {
     },
     {
       icon: <Award className="w-8 h-8" />,
-      value: "5+",
+      value: "18+",
       label: "Years Experience",
     },
     {
